@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>白菜价</title>
+    <link rel="icon" href="./bitbug_favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/baicaijia.css">
+    <link rel="stylesheet" href="./css/css/font-awesome.css">
+</head>
+
+<body>
+   <!-- 头部 -->
+   <header>
+    <a href="./index.html" class="arrows">
+      <i class="fa fa-angle-left"></i>
+    </a>
+    <span>白菜价</span>
+    <a href="javascript:;" class="app">
+      <img src="./images/2.png" alt="">
+    </a>
+  </header>
+    <!-- 详情 -->
+    <nav class="main" id="nav">
+
+        <ul class="ul_title clearfix">
+            <!-- 模板占坑 -->
+            <!-- title占坑 -->
+        </ul>
+
+    </nav>
+    <div class="content">
+        <ul class="ul_content clearfix">
+            <!-- 商品列表占坑 -->
+            <!-- content占坑 -->
+        </ul>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="footer-top">
+            <a href="javascript:;" class="login">登录</a>
+            <a href="javascript:;" class="register">注册</a>
+            <a href="#" class="back">
+                <img src="./images/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <div class="footer-foot">
+            <p>
+                <a href="javascript:;">手机APP下载</a> 慢慢买手机版 - 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+
+    </div>
+    <!-- 定位箭头 返回顶部功能 -->
+    <div class="backTop">
+        <a href="#" class="fa fa-arrow-up"></a>
+    </div>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/zepto/ajax.js"></script>
+    <script src="./lib/zepto/touch.js"></script>
+    <script src="./lib/zepto/event.js"></script>
+    <script src="./lib/isscroll/iscroll.js"></script>
+    <script src="./lib/itcastEvent.js"></script>
+    <script src="./lib/art-template/template-web.js"></script>
+    <script src="./js/baicaijia.js"></script>
+</body>
+
+</html>
+<script type="text/template" id="title">
+    {{each data value}}
+    <li>
+        <a href="javascript:;" data-id="{{value.titleId}}" class="titleId">{{value.title}}</a>
+    </li>
+    {{/each}}
+</script>
+
+<script type="text/template" id="content">
+    {{each data value}}
+    <li>
+        <div class="content_img">
+            {{@value.productImg}}
+        </div>
+        <div class="content_txt">
+            {{@value.productName}}
+            <div class="price"> {{@value.productPrice}}</div>
+            {{@value.productCouponRemain}}
+            <div class="box">
+                <div class="clickme ">{{@value.productCoupon}}</div>
+                <div class="link">{{@value.productHref}}</div>
+            </div>
+        </div>
+
+    </li>
+    {{/each}}
+</script>
