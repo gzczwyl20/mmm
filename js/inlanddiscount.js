@@ -21,8 +21,7 @@ $(function(){
                     return;
                 } else {
                     flag = false;
-                    console.log("正在加载");
-
+                    // console.log("正在加载");
                     $.ajax({
                         url: "http://193.112.55.79:9090/api/getinlanddiscount",
                         success: function (result) {
@@ -32,8 +31,9 @@ $(function(){
                             // console.log(more);
                             var append = template("temp_cufind_content_more",{"data":more});
                             // console.log(append);
-                            $(".cufind_content").append(append);
-
+                            setTimeout(function(){
+                                $(".cufind_content").append(append);
+                            }, 1500);
                         }
                     })
                 }
