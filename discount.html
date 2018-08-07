@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买比价网手机版</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/css/font-awesome.css">
+  <link rel="shortcut icon" href="./bitbug_favicon.ico">
+  <link rel="stylesheet" href="./css/discount.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header>
+    <a href="./moneyctrl.html" class="arrows">
+      <i class="fa fa-angle-left"></i>
+    </a>
+    <span>国内折扣</span>
+    <a href="javascript:;" class="app">
+      <img src="./images/2.png" alt="">
+    </a>
+  </header>
+
+  <!-- 内容区域 -->
+  <div class="main">
+    
+  </div>
+  <!-- 评论 -->
+  <div class="comment">
+  </div>
+
+<!-- 底部 -->
+  <footer>
+    <div class="foot_nav">
+      <a href="./index.html">首页 &gt;</a>
+      <a href="./moneyctrl.html">省钱控 &gt;</a>
+      <a href="#" class="foot_tit"></a>
+    </div>
+    <div class="app">
+      <img src="./images/6.jpg" alt="">
+      <p>慢慢买APP</p>
+      <p>专注全网比价，每一次购物都在为你省钱！</p>
+      <a href="javascript:;">立刻打开</a>
+    </div>
+    <div class="link">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#"><img src="./images/top.jpg" alt=""> 返回顶部</a>
+    </div>
+  </footer>
+
+  <!-- 固定栏 -->
+  <div class="broadside">
+    <img src="./images/4.png" alt="">
+    <a href="javascript:;"><span class="fa fa-edit"></span><span>评论</span></a>
+    <a href="javascript:;"><span class="fa fa-shopping-cart"></span><span>前往购买</span></a>
+  </div>
+
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <script src="./lib/zepto/ajax.js"></script>
+  <script src="./lib/zepto/selector.js"></script>
+  <script src="./lib/art-template/template-web.js"></script>
+  <script src="./js/discount.js"></script>
+  <script id="main" type="text/template">
+    <h3>{{data.productName}}</h3>
+    <h4>{{data.productPinkage}}</h4>
+    <div class="info">
+      <span>{{data.productFrom}}</span>
+      <span>{{data.productTime}}</span>
+      <span>{{data.productTips}}</span>
+    </div>
+    <div class="content">
+      {{@ data.productImgSm}}
+      <p>{{data.productInfo2}}</p>
+      <p></br></p>
+      <p>{{data.productInfo}}</p>
+      <p></br></p>
+      <p class="p1">{{@ data.productImg2}}</p>
+      <p></br></p>
+      {{@ data.productCity}}
+      <p></br></p>
+      <div class="buy">
+        <a href="javascript:;"><i class="fa fa-shopping-cart"></i>前往购买</a>
+      </div>
+    </div>
+  </script>
+  <script id="comment" type="text/template">
+    {{@ data.productComment}}
+  </script>
+  <script id="footer_tit" type="text/template">
+    {{@ data.productName}}
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+@charset "UTF-8";
+/*头部*/
+header {
+  height: 51px;
+  width: 100%;
+  background-color: #ff841d;
+  position: relative;
+}
+
+header .logo {
+  display: inline-block;
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+header .logo img {
+  max-width: 185px;
+}
+
+header .app {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 34px;
+  height: 34px;
+}
+
+header .app img {
+  width: 100%;
+}
+
+@media (max-width: 280px) {
+  header .app {
+    display: none;
+  }
+}
+
+/*搜索框*/
+.search {
+  height: 51px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.search input {
+  width: 100%;
+  border-radius: 20px;
+  height: 30px;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+.search a {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 63px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #ff841d;
+  color: #fff;
+  border-radius: 20px;
+}
+
+/*导航*/
+.category_nav {
+  height: 38px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ebebeb));
+  background-image: linear-gradient(#fff, #ebebeb);
+  margin-top: 20px;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #e0e0e0;
+  line-height: 38px;
+  padding-left: 5px;
+}
+
+.category_nav a {
+  color: #000;
+  font-size: 15px;
+}
+
+.category_nav a:last-child {
+  margin-right: 10px;
+  width: 50px;
+  height: 30px;
+  margin-top: 4px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#e9e9e9));
+  background-image: linear-gradient(#e2e2e2, #e9e9e9);
+}
+
+/*主题内容*/
+.main .title {
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.main img:nth-child(2) {
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+}
+
+.main .sc {
+  height: 60px;
+  position: relative;
+}
+
+.main .sc img {
+  width: 39px;
+  height: 39px;
+  float: right;
+  position: absolute;
+  right: 10%;
+  top: 0;
+}
+
+.main .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 34px;
+  border-top: 1px solid #c14d00;
+  border-bottom: 1px solid #c14d00;
+  margin-bottom: 10px;
+}
+
+.main .price a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  line-height: 34px;
+  background-color: #ffc219;
+  color: #fff;
+  font-size: 14px;
+}
+
+.main .price a:first-child {
+  background-color: #ff9a16;
+  position: relative;
+}
+
+.main .price .a1::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 8px;
+  height: 5px;
+  background-image: url(../images/tab_ar.png);
+  background-size: 8px 5px;
+}
+
+.main .price a:nth-child(2) {
+  border-left: 1px solid #c14d00;
+  border-right: 1px solid #c14d00;
+}
+
+.main table img {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.main .info {
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 5px 10px;
+  color: #666;
+}
+
+/*品论*/
+.comment .line {
+  height: 4px;
+  background-color: #7a7a7a;
+}
+
+.comment .title {
+  height: 35px;
+  background-color: #dbdbdb;
+  line-height: 35px;
+  text-align: center;
+}
+
+.comment .content .content-box {
+  padding: 10px 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.comment .content .content-box .c-t {
+  font-size: 12px;
+  color: #999;
+}
+
+.comment .content .content-box .c-t .time {
+  color: #666;
+}
+
+.comment .content .content-box .c-c {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #747774;
+  margin-bottom: 5px;
+}
+
+.comment .content .content-box .info {
+  font-size: 14px;
+  color: #000;
+}
+
+.comment .content .content-box .reply {
+  margin-top: 7px;
+  font-size: 12px;
+  color: #999;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/*更多优惠信息*/
+.moreInfo {
+  padding: 10px;
+  background-color: #fbfbfb;
+}
+
+.moreInfo a {
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  display: block;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#d5d5d5));
+  background-image: linear-gradient(#f0f0f0, #d5d5d5);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #5a5a5a;
+}
+
+/*底部*/
+footer {
+  padding-top: 10px;
+  background-color: #f2f2f2;
+}
+
+footer .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 34px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+footer .link a {
+  -webkit-box-flex: 2.5;
+      -ms-flex: 2.5;
+          flex: 2.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+
+footer .link a img {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+footer .link a:last-child {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+footer .link a:nth-child(2) {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+footer .info {
+  padding: 15px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+footer .info a span {
+  color: red;
+}
+
+/*广告*/
+.ad {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.ad span {
+  width: 21px;
+  height: 21px;
+  background-color: #c8c8da;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 21px;
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+.ad img {
+  float: left;
+  width: 41px;
+  height: 41px;
+  margin-right: 10px;
+}
+
+.ad p:first-of-type {
+  color: #888;
+}
+
+.ad p:last-of-type {
+  font-size: 14px;
+  color: #999;
+}
+
+.ad a {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  background-color: #ff7700;
+  width: 80px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 3px;
+  font-size: 15px;
+}
+/*# sourceMappingURL=categoryDetails.css.map */

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商城导航</title>
+    <link rel="stylesheet" href="./css/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/sitenav.css">
+    <link rel="shortcut icon" href="./bitbug_favicon.ico">
+</head>
+
+<body>
+    <!-- 头部B -->
+    <header>
+            <a href="./index.html" class="arrows">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <span>商城导航</span>
+            <a href="javascript:;" class="app">
+              <img src="./images/2.png" alt="">
+            </a>
+    </header>
+    <!-- 头部E -->
+    <!-- 商城内容B -->
+    <div class="content">
+
+        <!-- <a href="javascript:;" class="navHref">
+            <img src="" alt="" class="navImg">
+            <span class="navTitle">
+                京东商城
+            </span>
+        </a> -->
+    </div>
+    <!-- 商城内容E -->
+</body>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/zepto/ajax.js"></script>
+<script src="./lib/zepto/touch.js"></script>
+<script src="./lib/zepto/event.js"></script>
+<script src="./lib/art-template/template-web.js"></script>
+<script src="./js/sitenav.js"></script>
+<!-- 商城内容 -->
+<script type="text/template" id="aa">
+    {{each data value}}
+    <a href="{{value.navHref}}" class="navHref">
+        <img src="{{value.navImg}}" alt="" class="navImg">
+        <span class="{{navTitle}}">
+            {{value.navTitle}}
+        </span>
+    </a>
+    {{/each}}
+</script>
+
+</html>

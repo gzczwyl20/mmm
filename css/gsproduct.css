@@ -1,0 +1,263 @@
+@charset "UTF-8";
+/*头部*/
+header {
+  height: 51px;
+  background-color: #ff841d;
+  position: relative;
+  text-align: center;
+  line-height: 51px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+header .arrows {
+  width: 50px;
+  height: 51px;
+  float: left;
+  line-height: 51px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+header .app {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 34px;
+  height: 34px;
+}
+
+header .app img {
+  width: 100%;
+}
+
+header span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*导航*/
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 37px;
+  border-bottom: 1px solid #ccc;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+nav a {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+}
+
+nav a i {
+  font-style: normal;
+}
+
+nav a span {
+  font-size: 20px;
+  margin-top: -5px;
+  margin-left: 5px;
+}
+
+nav a span:last-child {
+  display: none;
+  margin-top: 10px;
+}
+
+nav > span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-left: 1px solid #ccc;
+  color: #333;
+}
+
+/*导航分类*/
+.list {
+  position: relative;
+}
+
+.list .jd-list {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.list .jd-list li {
+  width: 100%;
+  background-color: #fff;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  padding-left: 10px;
+  color: #5a5a5a;
+  position: relative;
+}
+
+.list .jd-list li.now::after {
+  content: '';
+  color: red;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/下载.svg");
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-family: '黑体';
+  font-size: 20px;
+}
+
+.list .hb-list {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.list .hb-list li {
+  width: 100%;
+  background-color: #fff;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  padding-left: 10px;
+  color: #5a5a5a;
+  position: relative;
+}
+
+.list .hb-list li.now::after {
+  content: '';
+  color: red;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/下载.svg");
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-family: '黑体';
+  font-size: 20px;
+}
+
+.list .price-list {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.list .price-list li {
+  width: 100%;
+  background-color: #fff;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  padding-left: 10px;
+  color: #5a5a5a;
+}
+
+/*内容部分*/
+.product {
+  padding: 10px;
+  background-color: #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product li {
+  width: 49%;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.product li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product li a img {
+  width: 100%;
+}
+
+.product li a .title {
+  font-size: 12px;
+  margin-top: 5px;
+  text-indent: 5px;
+  width: 100%;
+  /*溢出隐藏*/
+  overflow: hidden;
+  /*显示省略号*/
+  text-overflow: ellipsis;
+  /*不换行*/
+  white-space: nowrap;
+}
+
+.product li a .product-b {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.product li a .product-b .price {
+  color: #f8601d;
+  font-size: 20px;
+}
+
+.product li a .product-b .go {
+  color: #fff;
+  background-color: #ff9501;
+  padding: 3px 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=gsproduct.css.map */

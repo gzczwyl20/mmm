@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买比价网手机版</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/css/font-awesome.css">
+  <link rel="shortcut icon" href="./bitbug_favicon.ico">
+  <link rel="stylesheet" href="./css/categoryList.css">
+</head>
+<body>
+  <!-- 头部 -->
+  <header>
+    <a href="javascript:;" class="logo"><img src="./images/1.png" alt=""></a>
+    <a href="javascript:;" class="app"><img src="./images/2.png" alt=""></a>
+  </header>
+  <!-- 搜索框 -->
+  <div class="search">
+    <input type="search" placeholder="请输入你想比价的商品">
+    <a href="javascript:;">搜索</a>
+  </div>
+ 
+ <!-- 导航 -->
+ <nav class="category_nav">
+    <a href="./index.html">首页 &gt;</a>
+    <a href="./category.html">全部分类 &gt;</a>
+    <a href="#" class="category_tit"></a>
+    <a href="javascript:;" class="fr">筛选</a>
+  </nav>
+
+  <!-- 内容列表 -->
+  <div class="content">
+    <ul class="product-box">
+
+    </ul>
+  </div>
+  <!-- 分页 -->
+    <div class="paging">
+        <a href="javascript:;" class="page-l">上一页</a>
+        <select name="selectPage" id="selectPage">
+        </select>
+        <a href="javascript:;" class="page-r">下一页</a>
+      </div>
+<!-- 底部 -->
+      <footer>
+        <div class="link">
+          <a href="javascript:;">登录</a>
+          <a href="javascript:;">注册</a>
+          <a href="#"><img src="./images/top.jpg" alt=""> 返回顶部</a>
+        </div>
+        <div class="info">
+          <a href="javascript:;"><span>手机APP下载</span> 慢慢买手机版  -- 掌上比价平台</a>
+          <p>m.manmanbuy.com </p>
+        </div>
+      </footer>
+
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <script src="./lib/zepto/ajax.js"></script>
+  <script src="./lib/zepto/selector.js"></script>
+  <script src="./lib/zepto/touch.js"></script>
+  <script src="./lib/zepto/fx.js"></script>
+  <script src="./lib/zepto/fx_methods.js"></script>
+  <script src="./lib/art-template/template-web.js"></script>
+  <script src="./js/categoryList.js"></script>
+  <script id='product' type="text/xxx-template">
+    {{each data value}}
+    <li>
+        <a href="./categoryDetails.html?productId={{ value.productId }}&categoryId={{ value.categoryId }}">
+          {{@ value.productImg}}
+          <div class="title">{{value.productName}}</div>
+          <div class="price">{{value.productPrice}}</div>
+          <div class="other">
+            <div class="other-l fl">{{ value.productQuote }}</div>
+            <div class="other-r fr">{{value.productCom}}</div>
+          </div>
+        </a>
+      </li>
+    {{/each}}
+  </script>
+</body>
+</html> 

@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// 初始化
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+/*头部*/
+
+header {
+    height: 51px;
+    background-color: #ff841d;
+    position: relative;
+    text-align: center;
+    line-height: 51px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    .arrows {
+      width: 50px;
+      height: 51px;
+      float: left;
+      line-height: 51px;
+      text-align: center;
+      color: #fff;
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .app {
+      position: absolute;
+      top: 7px;
+      right: 7px; // float: right;
+      width: 34px;
+      height: 34px; // margin-top: 7px;
+      // margin-right: 7px;
+      img {
+        width: 100%;
+      }
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+//头部E
+// 商城内容B
+.content {
+    margin: 3px 30px;
+    .navHref {
+        margin: 2px 0px;
+        display: inline-block;
+        padding: 2px 3px;
+        border: 1px solid #999;
+        background-color: rgb(244, 244, 244);
+        border-radius: 5px;
+        font-size: 14px;
+        .navImg {
+            display: inline-block;
+            margin: 2px 2px;
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+        }
+        .navTitle {
+            font-size: 14px;
+        }
+    }
+}
+
+// 商城内容E

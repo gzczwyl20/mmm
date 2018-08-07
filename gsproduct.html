@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买比价网手机版</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/css/font-awesome.css">
+  <link rel="shortcut icon" href="./bitbug_favicon.ico">
+  <link rel="stylesheet" href="./css/gsproduct.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header>
+    <a href="./index.html" class="arrows">
+      <i class="fa fa-angle-left"></i>
+    </a>
+    <span>凑单品</span>
+    <a href="javascript:;" class="app">
+      <img src="./images/2.png" alt="">
+    </a>
+  </header>
+
+  <!-- 导航 -->
+  <nav>
+    <a href="javascript:;" id='jd-list'>
+      <i class="jd-txt">京东</i>
+      <span class="fa fa-sort-desc down"></span>
+      <span class="fa fa-sort-up up"></span>
+    </a>
+    <a href="javascript:;" id='hb-list'>
+      <i class="hb-txt">华北</i>
+      <span class="fa fa-sort-desc down"></span>
+      <span class="fa fa-sort-up up"></span>
+    </a>
+    <a href="javascript:;" id='price-list'>
+      <i class="price-txt">全部价格</i>
+      <span class="fa fa-sort-desc down"></span>
+      <span class="fa fa-sort-up up"></span>
+    </a>
+    <span>
+      <i class="fa fa-list"></i>
+    </span>
+  </nav>
+  <!-- 导航分类 -->
+  <div class="list">
+    <ul class="jd-list"></ul>
+    <ul class="hb-list"></ul>
+    <ul class="price-list"></ul>
+  </div>
+  <!-- 内容 -->
+  <ul class="product">
+
+  </ul>
+
+
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <script src="./lib/zepto/ajax.js"></script>
+  <script src="./lib/zepto/touch.js"></script>
+  <script src="./lib/zepto/fx.js"></script>
+  <script src="./lib/zepto/fx_methods.js"></script>
+  <script src="./lib/zepto/selector.js"></script>
+  <script src="./lib/art-template/template-web.js"></script>
+  <script src="./js/gsproduct.js"></script>
+  <script id="jd-nav" type="text/xxx-template">
+    {{each data value}}
+    <li data-id='{{value.shopId}}'>{{value.shopName}}</li>
+    {{/each}}
+  </script>
+  <script id="hb-nav" type="text/xxx-template">
+    {{each data value}}
+    <li data-id='{{value.areaId}}'>{{value.areaName}}</li>
+    {{/each}}
+  </script>
+  <script id="allPrice" type="text/xxx-template">
+    {{each data value}}
+    <li>{{value.price}}</li>
+    {{/each}}
+  </script>
+  <script id="product" type="text/xxx-template">
+    {{each data value}}
+    <li>
+      <a href="javascript:;">
+        <img src="{{value.productImg}}" alt="">
+        <div class="title">{{value.productName}}</div>
+        <div class="product-b">
+          <span class="price fl">{{value.productPrice}}</span>
+          <span class="go fr">去凑单</span>
+        </div>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+</body>
+
+</html>

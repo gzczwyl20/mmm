@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <link rel="icon" href="./bitbug_favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/inlanddiscount.css">
+    <link rel="stylesheet" href="./css/css/font-awesome.css">
+</head>
+
+<body>
+       <!-- 头部 -->
+         <header>
+        <a href="./index.html" class="arrows">
+          <i class="fa fa-angle-left"></i>
+        </a>
+        <span>国内折扣</span>
+        <a href="javascript:;" class="app">
+          <img src="./images/2.png" alt="">
+        </a>
+      </header>
+        <!-- 内容 -->
+        <div class="cufind">
+            <ul class="cufind_content clearfix">
+                <!-- 分类列表模板占坑 -->
+              <!-- temp_cufind_content -->
+            </ul>
+        </div>
+        <!-- 底部 -->
+        <div class="footer">
+            <div class="footer-top">
+                    <a href="javascript:;" class="login">登录</a>
+                    <a href="javascript:;" class="register">注册</a>
+                    <a href="#" class="back">
+                        <img src="./images/top.jpg" alt="">
+                        返回顶部
+                    </a>
+            </div>
+            <div class="footer-foot">
+                <p><a href="javascript:;">手机APP下载</a> 慢慢买手机版 - 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+           
+        </div>
+
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/zepto/ajax.js"></script>
+    <script src="./lib/zepto/touch.js"></script>
+    <script src="./lib/zepto/event.js"></script>
+    <script src="./lib/art-template/template-web.js"></script>
+    <script src="./js/inlanddiscount.js"></script>
+</body>
+
+</html>
+<!-- 详情商品模板 -->
+<script type="text/template" id="temp_cufind_content">
+    {{each data value }}
+        <li>
+            <a href="aspx.html?id={{value.productId}}">
+                {{@value.productImg}}
+              
+                    <div class="title">
+                        {{value.productName}}
+                    </div>
+                    <div class="price">
+                        {{value.productPrice}}
+                    </div>
+                    <div class="info">
+                        <div class="mall">{{value.productFrom}}|{{value.productTime}}</div>
+                    </div>
+            </a>
+        </li>
+    {{/each}}
+</script>
+
+<script type="text/template" id="temp_cufind_content_more">
+    {{each data value }}
+        <li>
+            <a href="zhekou.aspx.html?id={{value.productId}}">
+                {{@value.productImg}}
+              
+                    <div class="title">
+                        {{value.productName}}
+                    </div>
+                    <div class="price">
+                        {{value.productPrice}}
+                    </div>
+                    <div class="info">
+                        <div class="mall">{{value.productFrom}}|{{value.productTime}}</div>
+                    </div>
+            </a>
+        </li>
+    {{/each}}
+</script>

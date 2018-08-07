@@ -1,0 +1,269 @@
+@charset "UTF-8";
+/*头部*/
+header {
+  height: 51px;
+  width: 100%;
+  background-color: #ff841d;
+  position: relative;
+}
+
+header .logo {
+  display: inline-block;
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+header .logo img {
+  max-width: 185px;
+}
+
+header .app {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 34px;
+  height: 34px;
+}
+
+header .app img {
+  width: 100%;
+}
+
+@media (max-width: 280px) {
+  header .app {
+    display: none;
+  }
+}
+
+/*搜索框*/
+.search {
+  height: 51px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.search input {
+  width: 100%;
+  border-radius: 20px;
+  height: 30px;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+.search a {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 63px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #ff841d;
+  color: #fff;
+  border-radius: 20px;
+}
+
+/*nav*/
+.mm_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px;
+  height: 200px;
+  overflow: hidden;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.mm_nav a {
+  width: 25%;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.mm_nav a img {
+  width: 50px;
+  height: 50px;
+}
+
+.mm_nav a p {
+  font-size: 14px;
+}
+
+/* 推荐 */
+.tuiJian a {
+  width: 100%;
+  display: block;
+  height: 40px;
+  background-color: #ffa026;
+}
+
+.tuiJian a span:first-child {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 40px;
+  margin-left: 10px;
+}
+
+.tuiJian a span:last-child {
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+.tuiJian a span:last-child img {
+  width: 20px;
+  height: 20px;
+}
+
+/*商品详情*/
+.product li {
+  width: 100%;
+  height: 128px;
+  padding: 14px 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.product li a {
+  height: 100%;
+  display: block;
+}
+
+.product li a img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 10px;
+}
+
+.product li a .title {
+  color: #000;
+  height: 45px;
+  overflow: hidden;
+}
+
+.product li a .title span {
+  color: #ff6c00;
+}
+
+.product li a .other {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #a1a1a1;
+}
+
+.product li a .other i {
+  margin-right: 5px;
+}
+
+/*更多优惠信息*/
+.moreInfo {
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+.moreInfo a {
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  display: block;
+  background-color: #fbfbfb;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #5a5a5a;
+}
+
+/*底部*/
+footer {
+  padding-top: 10px;
+  background-color: #f2f2f2;
+}
+
+footer .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 34px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+footer .link a {
+  -webkit-box-flex: 2.5;
+      -ms-flex: 2.5;
+          flex: 2.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+
+footer .link a img {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+footer .link a:last-child {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+footer .link a:nth-child(2) {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+footer .info {
+  padding: 15px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+footer .info a span {
+  color: red;
+}
+
+/*固定栏*/
+.broadside {
+  position: fixed;
+  bottom: 15px;
+  right: 0px;
+}
+
+.broadside img {
+  width: 64px;
+  height: 70px;
+}
+
+.broadside > div {
+  height: 44px;
+}
+
+.broadside > div .icon {
+  display: none;
+  text-align: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  line-height: 44px;
+  margin: 0 auto;
+  color: #ccc;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/*# sourceMappingURL=index.css.map */
