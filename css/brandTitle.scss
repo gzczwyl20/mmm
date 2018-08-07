@@ -1,0 +1,162 @@
+/*头部*/
+
+header {
+  height: 51px;
+  width: 100%;
+  background-color: #ff841d;
+  position: relative;
+  .logo {
+    display: inline-block;
+    margin-top: 12px;
+    margin-left: 12px;
+    img {
+      max-width: 185px;
+    }
+  }
+  .app {
+    position: absolute;
+    top: 7px;
+    right: 7px; // float: right;
+    width: 34px;
+    height: 34px; // margin-top: 7px;
+    // margin-right: 7px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width:280px) {
+  header .app {
+    display: none;
+  }
+}
+
+/*搜索框*/
+
+.search {
+  // width: 100%;
+  height: 51px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  input {
+    width: 100%;
+    border-radius: 20px;
+    height: 30px;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    padding-left: 20px;
+  }
+  a {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 63px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #ff841d;
+    color: #fff;
+    border-radius: 20px;
+  }
+}
+
+/*导航*/
+.category_nav{
+  height: 38px;
+  background-image: linear-gradient(#fff,#ebebeb);
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #e0e0e0;
+  line-height: 38px;
+  padding-left: 5px;
+  a {
+    color: #5a5a5a;
+    font-size: 14px;
+  }
+ 
+}
+
+/*内容区域*/
+.main{
+  padding:10px;
+  background-color: #f2f2f2;
+  .title{
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: #874604;
+    background-color: #eeeeee;
+    
+  }
+  .content{
+    .content-box {
+      li {
+        font-weight: 700;
+        font-size: 16px;
+        border-bottom: 1px solid #ccc;
+        a {
+          padding: 10px 0;
+          color: #000;
+          display: block;
+          span {
+            font-size: 25px;
+            margin-right: 10px;
+            color: #ccc;
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*底部*/
+footer {
+  background-color: #f2f2f2;
+  .link {
+    display: flex;
+    height: 34px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    a{
+      flex: 2.5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      img {
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+      }
+    }
+    a:last-child {
+      flex: 5;
+    }
+    a:nth-child(2){
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+    }
+  }
+  .info {
+    padding: 15px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    a {   
+      span {
+        color: red;
+      } 
+    }
+  }
+}   

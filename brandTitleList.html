@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买比价网手机版</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/css/font-awesome.css">
+  <link rel="shortcut icon" href="./bitbug_favicon.ico">
+  <link rel="stylesheet" href="./css/brandTitleList.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header>
+    <a href="javascript:;" class="logo">
+      <img src="./images/1.png" alt="">
+    </a>
+    <a href="javascript:;" class="app">
+      <img src="./images/2.png" alt="">
+    </a>
+  </header>
+  <!-- 搜索框 -->
+  <div class="search">
+    <input type="search" placeholder="请输入你想比价的商品">
+    <a href="javascript:;">搜索</a>
+  </div>
+
+  <!-- 导航 -->
+  <nav class="category_nav">
+    <a href="./index.html">首页 &gt;</a>
+    <a href="./brandTitle.html">品牌大全 &gt;</a>
+    <a href="#" class="category_tit"></a>
+  </nav>
+
+  <!-- 内容 -->
+  <div class="main">
+    <div class="title1 title"></div>
+    <div class="content">
+      <ul class="content-box">
+       
+      </ul>
+    </div>
+    <div class="title2 title"></div>
+    <div class="seniority">
+      <ul class="seniority-box">
+       
+      </ul>
+    </div>
+    <div class="title3 title"></div>
+    <div class="comment">
+      <div class="tit clearfix"></div>
+      <ul class="comment-box">
+         
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- 底部 -->
+  <footer>
+    <div class="link">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#">
+        <img src="./images/top.jpg" alt=""> 返回顶部</a>
+    </div>
+    <div class="info">
+      <a href="javascript:;">
+        <span>手机APP下载</span> 慢慢买手机版 -- 掌上比价平台</a>
+      <p>m.manmanbuy.com </p>
+    </div>
+  </footer>
+
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <script src="./lib/zepto/ajax.js"></script>
+  <script src="./lib/zepto/selector.js"></script>
+  <script src="./lib/zepto/touch.js"></script>
+  <script src="./lib/zepto/fx.js"></script>
+  <script src="./lib/zepto/fx_methods.js"></script>
+  <script src="./lib/art-template/template-web.js"></script>
+  <script src="./js/brandTitleList.js"></script>
+  <script id="content" type="text/xxx-template">
+    {{each data value index}}
+    <li>
+      <a href="javascript:;" class="clearfix">
+        <span class="fl">{{index+1}}</span>
+        <div class="info fl">
+          <p>{{value.brandName}}</p>
+          <p>{{value.brandInfo}}</p>
+        </div>
+        <span class="fa fa-angle-right fr"></span>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+  <script id="seniority" type="text/xxx-template">
+    {{each data value index}}
+    <li data-id="{{value.productId}}">
+      <a href="javascript:;" class="clearfix">
+        {{@ value.productImg}}
+        <div class="info">
+          <p>{{value.productName}}</p>
+          <p><span>{{value.productPrice}}</span><span class="fr">★★★★★</span></p>
+          <p><span>{{value.productQuote}}</span><span>全网{{value.productCom}}</span></p>
+        </div>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+  <script id="comment" type="text/xxx-template">
+    {{each data value index}}
+    <li>
+        <p class="clearfix">{{value.comName}}:<span>★★★★★</span><span class="fr">{{value.comTime}}</span></p>
+        <div class="cont">
+            {{value.comContent}}
+        </div>
+      </li>
+    {{/each}}
+  </script>
+</body>
+
+</html>
