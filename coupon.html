@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/coupon.css">
+</head>
+<body>
+      <!-- 头部 -->
+   <header>
+    <a href="./index.html" class="arrows">
+      <i class="fa fa-angle-left"></i>
+    </a>
+    <span>优惠券</span>
+    <a href="javascript:;" class="app">
+      <img src="./images/2.png" alt="">
+    </a>
+  </header>
+    <div class="content">
+
+    </div>
+    <div class="bar">
+        <a href="./index.html">首页</a>
+        <span>&gt;</span>
+        <a href="javascript:;">优惠券</a>
+    </div>
+    <div class="nav">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#">
+            <img src="./images/top.jpg" width="15" height="15" alt="">
+            返回顶部</a>
+    </div>
+    <div class="footer">
+            <p>
+                <a href="http://m.manmanbuy.com/app.html?type=footword&value=wap" onclick="trackEvent('footer下载');" style="color: Red;">手机APP下载 </a> 
+                <a href="http://m.manmanbuy.com">
+                    慢慢买手机版</a> 
+                    -- 掌上比价平台
+                </p>
+            <p>
+                m.manmanbuy.com  
+            </p>
+        </div>
+
+</body>
+<script id="couponTitle" type="text/html">
+    {{each arr value index}}
+    <a href="{{value.couponLink}}?couponId={{value.couponId}}">
+        <img src="{{value.couponImg}}" alt="">
+        <p>{{value.couponTitle}}</p>
+    </a>
+    {{/each}}
+</script>
+<script src="./lib/art-template/template-web.js"></script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./js/coupon.js"></script>
+</html>

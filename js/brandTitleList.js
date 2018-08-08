@@ -21,7 +21,7 @@ $(function () {
   // 手机品牌渲染
   $.get('http://193.112.55.79:9090/api/getbrand', {
     brandtitleid: id
-  }, function (res) {
+   }, function (res) {
     // console.log(res);
     var contentHtml = template('content', {
       data: res.result
