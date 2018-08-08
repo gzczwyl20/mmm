@@ -43,7 +43,7 @@
 
 <!-- 更多优惠信息 -->
 <div class="moreInfo">
-  <a href="javascript:;">更多优惠信息 »</a>
+  <a href="./moneyctrl.html">更多优惠信息 »</a>
 </div>
 
 <!-- 品牌排行 -->
@@ -76,13 +76,15 @@
 
   <script src="./lib/zepto/zepto.min.js"></script>
   <script src="./lib/zepto/ajax.js"></script>
+  <script src="./lib/zepto/touch.js"></script>
+  <script src="./lib/zepto/event.js"></script>
   <script src="./lib/zepto/selector.js"></script>
   <script src="./lib/art-template/template-web.js"></script>
   <script src="./js/index.js"></script>
   <script id='mm_nav' type="text/xxx-template">
     {{each data value}}
-      <a href="./{{ value.titlehref }}">
-        <img src="{{ value.img }}" alt="">
+      <a href="{{ value.titlehref }}">
+        {{@ value.img }}
         <p>{{ value.name }}</p>
       </a>
     {{/each}}

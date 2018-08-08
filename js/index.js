@@ -2,12 +2,12 @@ $(function(){
   // 获取nav数据
   $.get('http://193.112.55.79:9090/api/getindexmenu','',function(res){
     // console.log(res);
-    $.each(res.result,function(i,item){
-        var img  = item.img    
-        img = img.split('"')[1];
-       // console.log(img);
-       item.img = img
-    })
+    // $.each(res.result,function(i,item){
+    //     var img  = item.img    
+    //     img = img.split('"')[1];
+    //    // console.log(img);
+    //    item.img = img
+    // })
     
     var navHtml = template('mm_nav',{data:res.result})
     // console.log(html);
@@ -15,7 +15,7 @@ $(function(){
 
 
     // 点击加载更多
-  $(".mm_nav a").eq(7).on('click',function(e){
+  $(".mm_nav a").eq(7).on('tap',function(e){
     var txt = $(this).find('p').text();
     if(txt == '更多'){
       $('.mm_nav').css('height',300);    
@@ -24,7 +24,7 @@ $(function(){
       $('.mm_nav').css('height',200);    
       $(this).find("p").html('更多')
     }
-    event.preventDefault();
+    // event.preventDefault();
       
   })
   },'json')
